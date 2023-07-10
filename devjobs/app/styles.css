@@ -1,0 +1,157 @@
+:root{
+    --violet : #5964e0;
+    --light-violet : #939BF4;
+    --light-grey: #F4f6f8;
+    --midnight: #121721;
+    --very-dark-blue: #19202d;
+    --dark-grey: #6E8098;
+    --gray: #9DAEC2;
+    --white: #FFFFFF;
+
+
+}
+
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    background-color: var(--light-grey);
+    font-family: 'Kumbh Sans', sans-serif;
+    height:200vh;
+    
+}
+
+.jobs{
+    display: flex;
+    width: 80vw;
+    height: 180vh;
+    margin: 0 auto;
+    justify-content: center;
+    flex-wrap: wrap;
+    column-gap: 0.8em;
+    padding-top: 160px;
+    overflow: hidden;
+}
+
+.job{
+    position: relative;
+    width:280px ;
+    background-color: var(--white);
+    margin-bottom: 60px;
+    padding: 30px;
+    border-radius: 6px;
+}
+._logo-background{
+   position: absolute;
+   top: -20px;
+   left: 30px;
+    width: 45px;
+    height: 45px;
+    border-radius: 15px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.job img{
+width: fit-content;
+height: fit-content;
+
+
+}
+
+._postedAt, ._company, ._location{
+font-size: smaller;
+margin: 8px 0;
+
+}
+
+h6{
+    font-size: small;
+    font-weight:bold ;
+    margin: 0;
+}
+._location{
+    margin: 20px 0 0 0 ;
+   /* color: #9e7f66;*/
+    color: var(--violet);
+    font-size: smaller;
+}
+
+._postedAt, ._company{
+color: var(--gray);
+}
+
+.header{
+    width: 100vw;
+    height:70px;
+    background-image:url("./assets/desktop/bg-pattern-header.svg");
+    border-bottom-left-radius: 70px;
+    position: fixed;
+    z-index: 1;
+    display: flex;
+    padding: 10px 100px 0 100px;
+    justify-content: space-between;
+}
+
+span{
+    display: flex;
+
+}
+.devjobs{
+    font-size: medium;
+    color: var(--white);
+    font-weight: bold;
+
+}
+
+.toggle{
+    height: 14px;
+    width: 30px;
+    background-color:var(--white);
+    border-radius: 9px;  
+    position: relative; 
+    margin: 0 10px; 
+}
+
+.toggle::before{
+    position: absolute;
+    content: "";
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    background-color: var(--violet);
+    top: 50%;
+    left: 2px;
+    transform: translateY(-50%);
+
+}
+
+.sun, .moon{
+    height: 14px;
+}
+
+.searchbar{
+    width: 60vw;
+    height: 40px;
+    background-color: var(--white);
+    position: absolute;
+    top:50px;
+    left: 20vw;
+}
+
+.load-more{
+    color: var(--white);
+    background-color: var(--violet);
+    border: none;
+    width: 90px;
+    height: 30px;
+    margin-left: 47%;
+    margin-top: 30px;
+    
+    
+}
