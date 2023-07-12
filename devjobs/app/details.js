@@ -1,7 +1,5 @@
 pageurl = window.location.href;
-// console.log(pageurl);
 let jobId = new URL(pageurl).searchParams.get("jobId");
-// console.log(typeof(jobId));
 let xml = new XMLHttpRequest();
 xml.open('get', 'data.json', true);
 xml.send();

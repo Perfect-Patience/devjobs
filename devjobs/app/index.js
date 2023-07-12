@@ -1,7 +1,3 @@
-//let idSelected;
-
-
-
 let http = new XMLHttpRequest();
 http.open('get', 'data.json',true);
 http.send();
@@ -26,16 +22,13 @@ http.onload = function(){
 
         document.querySelector(".jobs").innerHTML = output.join("");
       
-
-        // Add event listener to job elements
+//checks for when a job is selected.
         function checkJobSelected() {
           let jobId;
           let jobElements = document.querySelectorAll(".job");
           jobElements.forEach((jobElement) => {
               jobElement.addEventListener("click", function() {
                   jobId = this.getAttribute("id");
-                  // console.log("Clicked job ID:", jobId);
-                  // console.log("Clicked selection ID:", idSelected);
                   window.open("details.html?jobId=" + jobId, "_blank");
                   
               });
@@ -66,6 +59,7 @@ http.onload = function(){
             
             //removes the load-more button after it's clicked.
             load_more.style.display = "none";
+            
             checkJobSelected()
           
 
