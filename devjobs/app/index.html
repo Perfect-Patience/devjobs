@@ -12,18 +12,38 @@
 </head>
 <body>
     <div class="header">
-        <p class="devjobs">devjobs</p>
+        <p class="devjobstxt">devjobs</p>
         <span>
             <img class="sun" src="./assets/desktop/icon-sun.svg">
-            <div class="toggle"></div>
+            <div class="toggle"><div class="toggle-before"></div></div>
             <img class="moon" src="./assets/desktop/icon-moon.svg">
         </span>
         <div class="searchbar">
-
+            <div class="bar">
+                <img src="./assets/desktop/icon-search.svg">
+                <input type="text" placeholder="filter by title, companies, expertise..."/>
+            </div>
+            <div class="bar">
+                <img src="./assets/desktop/icon-location.svg">
+                <input type="text" placeholder="filter by location..."/>
+            </div>
+            <div class="bar spaced">
+                <span>
+                <div id="check-box">
+                    <img src="./assets/desktop/icon-check.svg">
+                </div>
+                <label for="check-box">Full Time Only</label>
+                </span> 
+                <button class="searchbt">Search</button>
+            </div>
         </div>
     </div>
     <div class = "jobs"></div>
-    <button class="load-more">Load More</button>
+    <div class="load-button"><button id="load-more">Load More</button></div>
+
+    <footer>
+        <div class="footer"><img src="./assets/desktop/bg-pattern-detail-footer.svg" alt="footer"/></div>
+    </footer>
     <script src="index.js"></script>
 </body>
 </html>

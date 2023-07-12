@@ -13,33 +13,29 @@
 
 
 *{
+    box-sizing: border-box;
     margin: 0;
     padding: 0;
-    box-sizing: border-box;
 }
 
 body{
     background-color: var(--light-grey);
-    font-family: 'Kumbh Sans', sans-serif;
-    height:200vh;
-    
+    font-family: 'Kumbh Sans', sans-serif;    
 }
 
 .jobs{
     display: flex;
     width: 80vw;
-    height: 180vh;
     margin: 0 auto;
-    justify-content: center;
     flex-wrap: wrap;
     column-gap: 0.8em;
     padding-top: 160px;
-    overflow: hidden;
+    justify-content: center;
 }
 
 .job{
     position: relative;
-    width:280px ;
+    width:260px ;
     background-color: var(--white);
     margin-bottom: 60px;
     padding: 30px;
@@ -70,6 +66,10 @@ margin: 8px 0;
 
 }
 
+h6:hover{
+color: var(--dark-grey);
+}
+
 h6{
     font-size: small;
     font-weight:bold ;
@@ -77,9 +77,9 @@ h6{
 }
 ._location{
     margin: 20px 0 0 0 ;
-   /* color: #9e7f66;*/
     color: var(--violet);
-    font-size: smaller;
+    font-size: x-small;
+    font-weight: bold;
 }
 
 ._postedAt, ._company{
@@ -102,11 +102,14 @@ span{
     display: flex;
 
 }
-.devjobs{
+.devjobstxt{
     font-size: medium;
     color: var(--white);
     font-weight: bold;
 
+}
+.toggle, .toggle-before, #check-box, #load-more, input, .searchbt, h6{
+    cursor: pointer;
 }
 
 .toggle{
@@ -118,7 +121,7 @@ span{
     margin: 0 10px; 
 }
 
-.toggle::before{
+.toggle-before{
     position: absolute;
     content: "";
     width: 10px;
@@ -128,6 +131,18 @@ span{
     top: 50%;
     left: 2px;
     transform: translateY(-50%);
+    transition: all 0.3s ease-in-out;
+    
+
+}
+
+.toggle-before:hover{
+    background-color: var(--light-violet);
+}
+
+.toggle.active .toggle-before{
+left: 18px;
+
 
 }
 
@@ -137,21 +152,109 @@ span{
 
 .searchbar{
     width: 60vw;
-    height: 40px;
+    height: 50px;
     background-color: var(--white);
     position: absolute;
-    top:50px;
+    top:45px;
     left: 20vw;
+    display: flex;
+}
+.bar{
+    height: 100%;
+    width: 100%;
+    border-right: 2px solid var(--light-grey);
+    display: flex;
+    align-items: center;
+    padding: 0 0 0 20px;
 }
 
-.load-more{
+.spaced{
+    display: flex;
+    justify-content: space-between;
+    padding: 10px;
+
+}
+.bar input{
+    height: 100%;
+    width: 100%;
+    border: none;
+    outline: none;
+    padding: 5px;
+}
+.bar img{
+    width: 20px;
+    margin-right: 20px;
+}
+
+#check-box{
+    background-color: var(--light-grey);
+    width: 20px;
+    height: 20px;
+    padding: 3px;
+    border-radius: 3px;
+    margin-right: 15px;
+}
+#check-box img{
+    width: 100%;
+    height: 100%;
+}
+#check-box:hover{
+    background-color: var(--violet);
+}
+.load-button{
+    display: flex;
+    width: 100%;
+    justify-content: center;
+    margin-bottom: 40px;
+}
+label{
+    font-size: smaller;
+    font-weight: bold;
+}
+
+.searchbt{
+    height: 35px;
+    width: 80px;
+    border: none;
+    border-radius: 4px;
+    color: var(--white);
+    background-color: var(--violet);
+    
+}
+
+.searchbt:hover{
+    background-color: var(--light-violet);
+}
+
+
+#load-more{
     color: var(--white);
     background-color: var(--violet);
     border: none;
     width: 90px;
     height: 30px;
-    margin-left: 47%;
-    margin-top: 30px;
-    
-    
+       
+}
+#load-more:hover{
+    background-color: var(--light-violet);
+}
+
+.footer{
+    width: 100%;
+    height: 70px;
+    position: static;
+}
+
+.footer img{
+    width: 100%;
+    height: 100%;
+}
+
+::placeholder{
+    font-size: small;
+    font-family: "Kumbh Sans";
+}
+ a, a.visited{
+    text-decoration: none;
+    color: black;  
 }
