@@ -1,3 +1,7 @@
+//let idSelected;
+
+
+
 let http = new XMLHttpRequest();
 http.open('get', 'data.json',true);
 http.send();
@@ -9,18 +13,37 @@ http.onload = function(){
         //diplay first 12 jobs
         let output = jobs.slice(0, 12).map((item) => {
             return `
-            <a href="details.html" target="_blank"><div class = "job">
+            <div class = "job" id = "${item.id}">
                 <div class="_logo-background" style="background-color:${item.logoBackground}"><img src="${item.logo}" alt="logo"/></div>
                 <p class="_postedAt">${item.postedAt} . ${item.contract}</p>
                 <h6>${item.position} </h6>
                 <p class="_company">${item.company}</p>
                 <p class="_location">${item.location}</p>
-            </div></a>
+            </div>
             `;
         });
         
 
         document.querySelector(".jobs").innerHTML = output.join("");
+      
+
+        // Add event listener to job elements
+        function checkJobSelected() {
+          let jobId;
+          let jobElements = document.querySelectorAll(".job");
+          jobElements.forEach((jobElement) => {
+              jobElement.addEventListener("click", function() {
+                  jobId = this.getAttribute("id");
+                  // console.log("Clicked job ID:", jobId);
+                  // console.log("Clicked selection ID:", idSelected);
+                  window.open("details.html?jobId=" + jobId, "_blank");
+                  
+              });
+          });
+        } 
+
+        checkJobSelected();
+        
 
         //display remaining jobs when load-more is clicked
 
@@ -29,28 +52,30 @@ http.onload = function(){
             // Load remaining jobs.
             let newJobs = jobs.slice(12, 15).map((item) => {
               return `
-                <a href="details.html" target="_blank"><div class = "job">
+                <div class = "job" id = "${item.id}">
                   <div class="_logo-background" style="background-color:${item.logoBackground}"><img src="${item.logo}" alt="logo"/></div>
                   <p class="_postedAt">${item.postedAt} . ${item.contract}</p>
                   <h6>${item.position} </h6>
                   <p class="_company">${item.company}</p>
                   <p class="_location">${item.location}</p>
-                </div></a> 
-              `;
+                </div>
+              ` 
             });
           
             document.querySelector(".jobs").innerHTML += newJobs.join("");
             
             //removes the load-more button after it's clicked.
             load_more.style.display = "none";
+            checkJobSelected()
           
 
-    }
-
-    
+    }    
 }
 
+
 }
 
+// dark mode light mode toggle.
 let toggle = document.querySelector(".toggle");
-toggle.addEventListener("click", ()=> toggle.classList.toggle("active"))
+toggle.addEventListener("click", ()=> toggle.classList.toggle("active"));
+
