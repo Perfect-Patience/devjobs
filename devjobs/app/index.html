@@ -31,8 +31,10 @@
             </div>
             <div class="bar spaced">
                 <span>
+                
                 <div class="check-box">
-                    <img src="./assets/desktop/icon-check.svg" alt="check icon">
+                    <input type="checkbox" id="filterCheckbox" class="custom-checkbox">
+                    <label for="filterCheckbox" class="checkbox-label"></label>
                 </div>
                 <label id="checkbxLabel" for="check-box">Full Time Only</label>
                 </span> 
@@ -50,9 +52,10 @@
             </div>
             <div class="bar spaced">
                 <span>
-                <div class="check-box">
-                    <img src="./assets/desktop/icon-check.svg" alt="check icon">
-                </div>
+                    <div class="check-box">
+                        <input type="checkbox" id="Checkbox" class="custom-checkbox">
+                        <label for="Checkbox" class="checkbox-label"></label>
+                    </div>
                 <label id="checkbxLabel" for="check-box">Full Time</label>
                 </span> 
                 <button class="searchbt">Search</button>
@@ -61,7 +64,24 @@
         <div class="searchbar3">
             <div class="small-bar">
                 <input id="S-input" type="text" placeholder="filter by title..."/>
-                <div class="filter-button"><img id="S-img" src="./assets/mobile/icon-filter.svg" alt="filter icon"/>
+                <div class="filter-button"><img id="filter-icon" id="S-img" src="./assets/mobile/icon-filter.svg" alt="filter icon"/>
+                    <div class="pop-container">
+                        <div class="pop-up">
+                            <div class="Filter-location">
+                                <img src="./assets/desktop/icon-location.svg" alt="location"/>
+                                <input type="text" placeholder="filter by location..."/>
+                            </div>
+                            <span>
+                                <div class="check-box">
+                                    <input type="checkbox" id="Checkbox" class="custom-checkbox">
+                                    <label for="Checkbox" class="checkbox-label"></label>
+                                </div>
+                            <label id="checkbxLabel" for="check-box">Full Time Only</label>
+                            </span> 
+                            <button>Search</button>
+                        </div>
+                    <div class="overlay"></div>
+                    </div>
                 <button  id ="S-button"> <img id ="isvg" src="./assets/mobile/icon-search2.svg" alt="search icon"/></button></div>
               </div>
         </div>

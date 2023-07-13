@@ -75,3 +75,18 @@ toggle.addEventListener("click", () =>{
   body.classList.toggle("dark");
 }
 );
+
+
+let icon = document.getElementById("filter-icon").addEventListener('click', function() {
+  let popup = this.parentElement.querySelector('.pop-up');
+  popup.style.display = 'block';
+
+  var overlay = this.parentElement.querySelector('.overlay');
+  overlay.style.display = 'block';
+
+  
+});
+
+// if (popup-Container && popup && !popupContainer.contains(event.target)) {
+//   popup.style.display = 'none';
+// }

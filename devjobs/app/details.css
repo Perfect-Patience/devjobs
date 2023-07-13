@@ -52,7 +52,6 @@ header{
     width: 55vw;
     height: 90px;
     background-color: var(--txtBackground);
-    position: absolute;
     left:22.5vw;
     top: 45px;
 }
@@ -280,4 +279,19 @@ body.dark{
     --centered-footer: var(--very-dark-blue);
     --heading-color: var(--white);
     --button-background: #c9c9c9;
+}
+
+
+
+/* Small screen */
+@media screen and (max-width: 550px){
+
+    header{
+        background-image:url("./assets/mobile/bg-pattern-header.svg");
+        padding: 20px;
+        display: flex;
+        justify-content: space-between;
+
+
+    }
 }
