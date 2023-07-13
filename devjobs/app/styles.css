@@ -11,6 +11,7 @@
     --body-background: var(--light-grey);
     --checkbox-color: var(--light-grey);
     --label-color: black;
+    --border: var(--light-grey);
     
 
 
@@ -48,7 +49,7 @@ span{
 
 }
 .devjobstxt{
-    font-size: large;
+    font-size: x-large;
     color: white;
     font-weight: bold;
 
@@ -58,10 +59,10 @@ span{
 }
 
 .toggle{
-    height: 14px;
-    width: 30px;
+    height: 20px;
+    width: 45px;
     background-color:white;
-    border-radius: 9px;  
+    border-radius: 10px;  
     position: relative; 
     margin: 0 10px; 
 }
@@ -69,8 +70,8 @@ span{
 .toggle-before{
     position: absolute;
     content: "";
-    width: 10px;
-    height: 10px;
+    width: 15px;
+    height: 15px;
     border-radius: 50%;
     background-color: var(--violet);
     top: 50%;
@@ -86,7 +87,7 @@ span{
 }
 
 .toggle.active .toggle-before{
-left: 18px;
+left: 28px;
 
 
 }
@@ -107,10 +108,10 @@ left: 18px;
     z-index: 1;
 }
 .bar{
+    display: flex;
     height: 100%;
     width: 100%;
-    border-right: 2px solid var(--light-grey);
-    display: flex;
+    border-right: 2px solid var(--border);
     align-items: center;
     padding: 0 0 0 20px;
 }
@@ -129,6 +130,7 @@ left: 18px;
     outline: none;
     padding: 5px;
     background-color: var(--job-background);
+    color: var(--font-color); 
 }
 .bar img{
     width: 20px;
@@ -287,5 +289,6 @@ body.dark{
 --font-color: white;
 --checkbox-color: #979797;
 --label-color: white;
+--border: var(--dark-grey);
 
 }

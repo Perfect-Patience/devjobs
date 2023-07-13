@@ -8,6 +8,17 @@
     --gray: #9DAEC2;
     --white: #FFFFFF;
 
+    --body-background : var(--light-grey);
+    --company-name: var(--dark-grey);
+    --txtBackground: var(--white);
+    --txtareaColor: var(--dark-grey);
+    --footer-Background: var(--white);
+    --belowposition : var(--dark-grey);
+    --heading-color: black;
+    --centered-footer: var(--white);
+    --button-background: var(--light-grey);
+
+
 }
 *{
     margin: 0;
@@ -18,7 +29,10 @@
     overflow-x: hidden ;
 }
 
-
+body{
+    background-color: var(--body-background);
+    transition: all 0.2ms;
+}
 
 header{
     width: 100vw;
@@ -36,15 +50,68 @@ header{
 .headbox{
     position: absolute;
     width: 55vw;
-    height: 80px;
-    background-color: var(--white);
+    height: 90px;
+    background-color: var(--txtBackground);
     position: absolute;
     left:22.5vw;
     top: 45px;
 }
-.box{
-    height: 80px;
+
+span{
     display: flex;
+
+}
+.devjobstxt{
+    font-size: x-large;
+    color: white;
+    font-weight: bold;
+
+}
+.toggle, .toggle-before, #check-box, #load-more, input, .searchbt, h6, .job{
+    cursor: pointer;
+}
+
+.toggle{
+    height: 20px;
+    width: 45px;
+    background-color:white;
+    border-radius: 10px;  
+    position: relative; 
+    margin: 0 10px; 
+}
+
+.toggle-before{
+    position: absolute;
+    content: "";
+    width: 15px;
+    height: 15px;
+    border-radius: 50%;
+    background-color: var(--violet);
+    top: 50%;
+    left: 2px;
+    transform: translateY(-50%);
+    transition: all 0.3s ease-in-out;
+    
+
+}
+
+.toggle-before:hover{
+    background-color: var(--light-violet);
+}
+
+.toggle.active .toggle-before{
+left: 28px;
+
+
+}
+
+.sun, .moon{
+    height: 20px;
+}
+
+.box{
+    display: flex;
+    height: 90px;
 }
 
 .logo-background{
@@ -53,7 +120,7 @@ header{
     display: flex;
     justify-content: center;
     align-items: center;
-    padding: 20px;
+    padding: 15px;
 }
 
 .logo-background img{
@@ -68,8 +135,8 @@ header{
     align-items: center;
 }
 
-.company_name{
-margin-top: 10px;
+.company_url{
+margin-top: 5px;
 font-size: small;
 color: var(--dark-grey);
 text-transform: lowercase;
@@ -83,6 +150,7 @@ text-transform: lowercase;
     width: 100px;
     font-weight: 700;
     color: var(--violet);
+    background-color: var(--button-background);
 }
 
 .company_site:hover{
@@ -98,7 +166,7 @@ text-transform: lowercase;
 
 .text_area{
     width: 55vw;
-    background-color: white;
+    background-color: var(--txtBackground);
     margin:  0 auto;
     padding: 30px;
 }
@@ -138,6 +206,10 @@ text-transform: lowercase;
     margin: 20px 0;
 }
 
+h3, h4, footer p{
+    color: var(--heading-color);
+}
+
 .text_area p:not(._country){
     font-size: smaller;
     color: var(--dark-grey);
@@ -161,7 +233,7 @@ li{
 
 footer{
 width: 100%;
-background-color:var(--white);
+background-color:var(--footer-Background);
 height: 90px;
 }
 
@@ -169,7 +241,7 @@ height: 90px;
     width: 55vw;
     margin: 0 auto;
     height: 100%;
-    background-color: white;
+    background-color:var(--centered-footer);
     display: flex;
     align-items: center;
     justify-content: space-between;
@@ -199,4 +271,13 @@ height: 90px;
 
 .company_site, .centered-footer button, .apply_bt{
     cursor: pointer;
+}
+
+body.dark{
+    --body-background : var(--midnight);
+    --txtBackground: var(--very-dark-blue);
+    --footer-Background: var(--very-dark-blue);
+    --centered-footer: var(--very-dark-blue);
+    --heading-color: var(--white);
+    --button-background: #c9c9c9;
 }

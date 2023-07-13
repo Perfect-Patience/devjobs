@@ -19,7 +19,7 @@ xml.onload = function(){
                 <div class="company_info">
                     <div>
                         <h4>${item.company}</h4> 
-                        <p class="company_name">${item.company}.com</p>
+                        <p class="company_url">${item.company}.com</p>
                     </div>
                 <a href="${item.website}"><button class="company_site">Company Site</button></a>
                 </div>
@@ -89,4 +89,8 @@ xml.onload = function(){
 
 // dark mode light mode toggle.
 let toggle = document.querySelector(".toggle");
-toggle.addEventListener("click", ()=> toggle.classList.toggle("active"));
+let body = document.querySelector("body");
+toggle.addEventListener("click", ()=> {
+    toggle.classList.toggle("active");
+    body.classList.toggle("dark");
+});
