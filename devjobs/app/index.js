@@ -71,5 +71,11 @@ http.onload = function(){
 
 // dark mode light mode toggle.
 let toggle = document.querySelector(".toggle");
-toggle.addEventListener("click", ()=> toggle.classList.toggle("active"));
+let body = document.querySelector("body");
+console.log(body);
+toggle.addEventListener("click", () =>{
+  toggle.classList.toggle("active");
+  body.classList.toggle("dark");
+}
+);
 
