@@ -8,36 +8,62 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Kumbh+Sans:wght@100;200;300;400;500;600;700;800&display=swap" 
     rel="stylesheet">
-    <title>Document</title>
+    <title>Home</title>
 </head>
 <body>
     <div class="header">
         <p class="devjobstxt">devjobs</p>
         <span>
-            <img class="sun" src="./assets/desktop/icon-sun.svg">
+            <img class="sun" src="./assets/desktop/icon-sun.svg" alt="sun">
             <div class="toggle"><div class="toggle-before"></div></div>
-            <img class="moon" src="./assets/desktop/icon-moon.svg">
+            <img class="moon" src="./assets/desktop/icon-moon.svg" alt="moon">
         </span>
     </div>
     <div class="jobs-container">
-        <div class="searchbar">
+        <div class="searchbar1">
             <div class="bar">
-                <img src="./assets/desktop/icon-search.svg">
+                <img src="./assets/desktop/icon-search.svg" alt="search icon">
                 <input type="text" placeholder="filter by title, companies, expertise..."/>
             </div>
             <div class="bar">
-                <img src="./assets/desktop/icon-location.svg">
+                <img src="./assets/desktop/icon-location.svg" alt="search icon">
                 <input type="text" placeholder="filter by location..."/>
             </div>
             <div class="bar spaced">
                 <span>
-                <div id="check-box">
-                    <img src="./assets/desktop/icon-check.svg">
+                <div class="check-box">
+                    <img src="./assets/desktop/icon-check.svg" alt="check icon">
                 </div>
-                <label for="check-box">Full Time Only</label>
+                <label id="checkbxLabel" for="check-box">Full Time Only</label>
                 </span> 
                 <button class="searchbt">Search</button>
             </div>
+        </div>
+        <div class="searchbar2">
+            <div class="bar">
+                <img src="./assets/desktop/icon-search.svg" alt="search icon">
+                <input type="text" placeholder="filter by title..."/>
+            </div>
+            <div class="bar">
+                <img src="./assets/desktop/icon-location.svg" alt="location icon">
+                <input type="text" placeholder="filter by location..."/>
+            </div>
+            <div class="bar spaced">
+                <span>
+                <div class="check-box">
+                    <img src="./assets/desktop/icon-check.svg" alt="check icon">
+                </div>
+                <label id="checkbxLabel" for="check-box">Full Time</label>
+                </span> 
+                <button class="searchbt">Search</button>
+            </div>
+        </div>
+        <div class="searchbar3">
+            <div class="small-bar">
+                <input id="S-input" type="text" placeholder="filter by title..."/>
+                <div class="filter-button"><img id="S-img" src="./assets/mobile/icon-filter.svg" alt="filter icon"/>
+                <button  id ="S-button"> <img id ="isvg" src="./assets/mobile/icon-search2.svg" alt="search icon"/></button></div>
+              </div>
         </div>
         <div class = "jobs"></div>
     </div>

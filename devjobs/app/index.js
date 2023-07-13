@@ -22,7 +22,7 @@ http.onload = function(){
 
         document.querySelector(".jobs").innerHTML = output.join("");
       
-//checks for when a job is selected.
+        //checks for when a job is selected.
         function checkJobSelected() {
           let jobId;
           let jobElements = document.querySelectorAll(".job");
@@ -61,13 +61,10 @@ http.onload = function(){
             load_more.style.display = "none";
             
             checkJobSelected()
-          
+          } 
+    }
+}    
 
-    }    
-}
-
-
-}
 
 // dark mode light mode toggle.
 let toggle = document.querySelector(".toggle");
@@ -78,4 +75,3 @@ toggle.addEventListener("click", () =>{
   body.classList.toggle("dark");
 }
 );
-
