@@ -97,12 +97,14 @@ left: 18px;
 
 .searchbar{
     width: 930px;
+
     height: 60px;
     background-color: var(--job-background);
     position: absolute;
     z-index: 1;
     top:50px;
     display: flex;
+    z-index: 1;
 }
 .bar{
     height: 100%;
@@ -149,6 +151,7 @@ left: 18px;
     background-color: var(--violet);
 }
 
+
 .jobs-container{
     margin: 0 auto;
     display: flex;
@@ -156,11 +159,14 @@ left: 18px;
     justify-content: center;
     padding-top: 100px;
 }
+
+
 .jobs{
     display: flex;
     flex-wrap: wrap;
     column-gap: 0.4em;
     justify-content: space-between;
+
     
 }
 
