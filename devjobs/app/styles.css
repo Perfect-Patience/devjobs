@@ -34,27 +34,38 @@ body{
 
 .header{
     width: 100vw;
-    height:80px;
+    height:90px;
     background-image:url("./assets/desktop/bg-pattern-header.svg");
-    border-bottom-left-radius: 80px;
+    border-bottom-left-radius: 65px;
     position: static;
     z-index: 1;
     display: flex;
-    padding: 20px 100px 0 100px;
     justify-content: space-between;
+    align-items: center;
+}
+
+.header span{
+    display: flex;
+    position: absolute;
+    top: 10px;
+    right: 50px;
+
 }
 
 span{
     display: flex;
-
+    align-items: center;
 }
 .devjobstxt{
     font-size: x-large;
     color: white;
     font-weight: bold;
+    position: absolute;
+    top: 8px;
+    left: 50px;
 
 }
-.toggle, .toggle-before, #check-box, #load-more, input, .searchbt, h6, .job{
+.toggle, .toggle-before, #load-more, input, .searchbt, h6, .job{
     cursor: pointer;
 }
 
@@ -87,7 +98,7 @@ span{
 }
 
 .toggle.active .toggle-before{
-left: 28px;
+ left: 28px;
 
 
 }
@@ -103,7 +114,7 @@ left: 28px;
     background-color: var(--job-background);
     position: absolute;
     z-index: 1;
-    top:50px;
+    top:60px;
     display: flex;
     z-index: 1;
 }
@@ -137,9 +148,6 @@ input[type="checkbox"] {
         background-color:var(--violet);
       }
 
-    input[type="checkbox"] + label:hover{
-        background-color: var(--violet);
-    }
 
 
 .searchbar2, .searchbar3{
@@ -160,6 +168,7 @@ input[type="checkbox"] {
     justify-content: space-between;
     align-items: center;
     padding: 10px;
+    border: none;
 
 }
 .bar input{
@@ -220,7 +229,7 @@ margin: 8px 0;
 
 }
 
-h6:hover{
+.job:hover h6{
 color: var(--dark-grey);
 }
 
@@ -321,11 +330,15 @@ footer{
     align-items:flex-end;
     overflow: hidden;
 }
-
+.popcontainer{
+    max-width: 90vw;
+    display: flex;
+    justify-content: center;
+}
 
 .pop-up{
     height: 300px;
-    width: 90vw;
+    width: 80vw;
     margin: 0 auto;
     position: absolute;
     top: 100%;
@@ -404,8 +417,8 @@ footer{
     position: fixed;
     top: 0;
     left: 0;
-    width: 100%;
-    height: 100%;
+    width: 100vw;
+    height: 100vh;
     background-color: rgba(0, 0, 0, 0.5);
     z-index: 9;
     display: none;
@@ -422,9 +435,16 @@ footer{
 {
 
     .header{
+        width: 100vw;
         background-image: url("./assets/mobile/bg-pattern-header.svg");
         padding: 10px 20px 0 20px;
+        border-radius: 0;
 
+    }
+
+    .devjobstxt{
+        font-size:larger;
+        left: 8vw;
     }
 
     .jobs-container{
@@ -441,13 +461,13 @@ footer{
     .searchbar3{
         display: flex;
         z-index: 1;
-        width: 85vw;
+        width: 95vw;
         align-items: center;
         padding: 20px;
         height: 50px;
         justify-content: space-between;
          position: absolute;
-         top: 50px;
+         top: 60px;
 
     }
 
@@ -504,6 +524,7 @@ footer{
 
     .footer img{
         src: url(./assets/mobile/bg-pattern-detail-footer.svg);
+        width: 100vw;
     }
 
 }
@@ -543,7 +564,7 @@ footer{
         background-color: var(--job-background);
         position: absolute;
         z-index: 1;
-        top:50px;
+        top:60px;
         display: flex;
         z-index: 1;
     }
@@ -559,6 +580,8 @@ footer{
     ::placeholder{
         font-size: 10px;
     }
+
+    
 }
 
 

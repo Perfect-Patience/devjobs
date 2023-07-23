@@ -29,7 +29,7 @@ http.onload = function(){
           jobElements.forEach((jobElement) => {
               jobElement.addEventListener("click", function() {
                   jobId = this.getAttribute("id");
-                  window.open("details.html?jobId=" + jobId, "_blank");
+                  window.open("details.html?jobId=" + jobId, "_self");
                   
               });
           });
@@ -69,15 +69,35 @@ http.onload = function(){
 // dark mode light mode toggle.
 let toggle = document.querySelector(".toggle");
 let body = document.querySelector("body");
-console.log(body);
+
 toggle.addEventListener("click", () =>{
   toggle.classList.toggle("active");
   body.classList.toggle("dark");
+  
+  //store mode in local storage.
+  
+  //if toggle on light mode.
+  if (!body.classList.contains('dark')){
+    return localStorage.setItem("mode", "light");
+  }
+
+  //if toggle on dark mode.
+  return localStorage.setItem("mode", "dark");
 }
 );
 
+//get saved mode;
+getMode = localStorage.getItem("mode");
 
-let icon = document.getElementById("filter-icon").addEventListener('click', function() {
+if (getMode && getMode === "dark"){
+  toggle.classList.toggle("active");
+  body.classList.toggle("dark");
+}
+
+
+
+// Display pop-up and overlay when filter icon is clicked.
+document.getElementById("filter-icon").addEventListener('click', function() {
   let popup = this.parentElement.querySelector('.pop-up');
   popup.style.display = 'block';
 
@@ -87,6 +107,11 @@ let icon = document.getElementById("filter-icon").addEventListener('click', func
   
 });
 
-// if (popup-Container && popup && !popupContainer.contains(event.target)) {
-//   popup.style.display = 'none';
-// }
+// removes overlay and pop-up when user clicks outside the pop-up box;
+let overlay = document.querySelector('.overlay');
+overlay.addEventListener('click',function (){
+let popup = this.parentElement.querySelector('.pop-up');
+popup.style.display = 'none';
+overlay.style.display = 'none';
+
+});

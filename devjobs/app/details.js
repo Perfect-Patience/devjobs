@@ -1,5 +1,6 @@
 pageurl = window.location.href;
 let jobId = new URL(pageurl).searchParams.get("jobId");
+
 let xml = new XMLHttpRequest();
 xml.open('get', 'data.json', true);
 xml.send();
@@ -90,7 +91,26 @@ xml.onload = function(){
 // dark mode light mode toggle.
 let toggle = document.querySelector(".toggle");
 let body = document.querySelector("body");
+
+
 toggle.addEventListener("click", ()=> {
     toggle.classList.toggle("active");
     body.classList.toggle("dark");
+
+    //store mode in local storage
+    //light is light mode
+    if (!body.classList.contains("dark")){
+        return localStorage.setItem("mode, light");
+    }
+
+    //dark if dark mode;\]
+    return localStorage.setItem("mode", "dark");
 });
+
+//get saved mode
+getMode = localStorage.getItem("mode");
+//load mode based on stored mode value
+if(getMode && getMode == "dark"){
+    toggle.classList.toggle("active");
+    body.classList.toggle("dark");
+}
