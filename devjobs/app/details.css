@@ -178,6 +178,9 @@ text-transform: lowercase;
     margin-bottom: 20px;
 }
 
+._postedAt{
+    margin-bottom: 5px;
+}
 ._country{
     color: var(--violet);
     font-size: x-small;
@@ -315,28 +318,30 @@ body.dark{
 
 
     .company_info{
+        display: block;
+        padding-top: 40px;
         justify-content: center;
-        width: auto;
+        align-items: center;
+
+        width: 100%;
 
     }
 
     .company_info h4{
         font-size: large;
-        position: absolute;
         top: 40px;
         left: 35vw;
     }
 
 
     .company_info p{
-        position: absolute;
         font-size: large;
         top: 70px;
         left: 32vw
 
     }
     .company_site{
-        position: absolute;
+        
         width: 140px;
         height: 45px;
         top: 120px;
@@ -383,6 +388,26 @@ body.dark{
         height: 50px;
         font-size: large;
     }
+
+    .company_info div .centered{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .centered2{
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        margin-bottom: 15px;
+    }
+
+    .centered3{
+        display: flex;
+        justify-content: center;
+    }
+
+
 
 }
 
