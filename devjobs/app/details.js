@@ -8,7 +8,6 @@ xml.send();
 xml.onload = function(){
     if (this.readyState == 4 && this.status == 200){
         const job_details = JSON.parse(this.responseText);
-        console.log("working");
 
         const item = job_details.find((job) => job.id == jobId);
         if(item){
@@ -19,10 +18,10 @@ xml.onload = function(){
                 </div>
                 <div class="company_info">
                     <div>
-                        <h4>${item.company}</h4> 
-                        <p class="company_url">${item.company}.com</p>
+                        <div class="centered"><h4>${item.company}</h4></div> 
+                        <div class="centered2"><p class="company_url">${item.company}.com</p></div>
                     </div>
-                <a href="${item.website}"><button class="company_site">Company Site</button></a>
+                <div class="centered3"><a href="${item.website}"><button class="company_site">Company Site</button></a></div>
                 </div>
             </div>
                 `;
@@ -65,6 +64,7 @@ xml.onload = function(){
 
             document.querySelector(".text_section").innerHTML = output_text;
 
+            //load requirements into unordered list
             const items = item.requirements.items;
             const unorderedList = document.getElementById("requirement_list");
             items.forEach((requirement) => {
@@ -74,6 +74,7 @@ xml.onload = function(){
             });
 
 
+            //load roles into ordered list
             const roles = item.role.items;
             const orderedList = document.getElementById("role_list");
 
