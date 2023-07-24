@@ -100,7 +100,7 @@ toggle.addEventListener("click", ()=> {
     //store mode in local storage
     //light is light mode
     if (!body.classList.contains("dark")){
-        return localStorage.setItem("mode, light");
+        return localStorage.setItem("mode", "light");
     }
 
     //dark if dark mode;\]
