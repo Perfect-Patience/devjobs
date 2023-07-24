@@ -10,7 +10,7 @@ http.onload = function(){
         let output = jobs.slice(0, 12).map((item) => {
             return `
             <div class = "job" id = "${item.id}">
-                <div class="_logo-background" style="background-color:${item.logoBackground}"><img src="${item.logo}" alt="logo"/></div>
+                <div class="_logo-background" style="background-color:${item.logoBackground}"><img src="${item.logo}" alt="${item.company} logo"/></div>
                 <p class="_postedAt">${item.postedAt} . ${item.contract}</p>
                 <h6>${item.position} </h6>
                 <p class="_company">${item.company}</p>
@@ -46,7 +46,7 @@ http.onload = function(){
             let newJobs = jobs.slice(12, 15).map((item) => {
               return `
                 <div class = "job" id = "${item.id}">
-                  <div class="_logo-background" style="background-color:${item.logoBackground}"><img src="${item.logo}" alt="logo"/></div>
+                  <div class="_logo-background" style="background-color:${item.logoBackground}"><img src="${item.logo}" alt="${item.company}logo"/></div>
                   <p class="_postedAt">${item.postedAt} . ${item.contract}</p>
                   <h6>${item.position} </h6>
                   <p class="_company">${item.company}</p>

@@ -15,7 +15,7 @@ xml.onload = function(){
             let output_head = `
             <div class="box">
                 <div class="logo-background" style="background-color: ${item.logoBackground}">
-                    <img src="${item.logo}" alt="company logo">
+                    <img src="${item.logo}" alt="${item.company} logo">
                 </div>
                 <div class="company_info">
                     <div>
